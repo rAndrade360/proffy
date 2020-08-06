@@ -112,6 +112,7 @@ text-align: left;
         margin-right: 4rem;
         font-size: 2rem;
         width: 30rem;
+        text-decoration: none;
     }
     #footer {
         grid-area: total;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
 import logo from '../../assets/images/logo.svg'
 import landing from '../../assets/images/landing.svg'
@@ -16,14 +17,14 @@ const Home: React.FC = () => {
             </div>
         <img src={landing} className="hero-image" alt="Imagem ilustrativa"/>
         <div id="button-container">
-                <a className="study">
+                <Link to="/study" className="study">
                     <img src={study} alt="Estudar" />
                     Estudar
-                </a>
-                <a className="give-classes">
+                </Link>
+                <Link to="/give-classes" className="give-classes">
                     <img src={giveClasses} alt="Dar aulas" />
                     Dar aulas
-                </a>
+                </Link>
         </div>
                 
         <p id="footer">Total de 200 conexões já realizadas <img src={purpleHeart}  alt="Logo da aplicação"/></p>
