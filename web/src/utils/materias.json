@@ -1,0 +1,34 @@
+[
+    {
+        "value": "Matemática",
+        "label": "Matemática"
+    },
+    {
+        "value": "Potuguês",
+        "label": "Potuguês"
+    },
+    {
+        "value": "Geografia",
+        "label": "Geografia"
+    },
+    {
+        "value": "História",
+        "label": "História"
+    },
+    {
+        "value": "Física",
+        "label": "Física"
+    },
+    {
+        "value": "Química",
+        "label": "Química"
+    },
+    {
+        "value": "Biologia",
+        "label": "Biologia"
+    },
+    {
+        "value": "Artes",
+        "label": "Artes"
+    }
+]

@@ -1,0 +1,93 @@
+#page-teacher-form {
+    width: 100vw;
+    height: 100vh;
+}
+#page-teacher-form .page-header .top-bar-content{
+    margin-bottom: 6.4rem;
+}
+#page-teacher-form main {
+    width: 100%;
+    max-width: 74rem;
+    background-color: var(--color-box-base);
+    margin: -3.2rem auto 3.2rem;
+    border-radius: 0.8rem;
+    padding-top: 6.4rem;
+    overflow: hidden;
+}
+
+#page-teacher-form main form fieldset {
+    border: 0;
+    padding: 0 2.4rem;
+}
+#page-teacher-form main form fieldset + fieldset {
+    margin-top: 6.4rem;
+}
+#page-teacher-form main fieldset legend {
+    flex-direction: row;
+    margin-bottom: 2.4rem;
+    display: flex;
+    align-items: center;
+    font: 700 2.4rem Archivo;
+    color: var(--color-text-title);
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 1.6rem;
+}
+#page-teacher-form main form fieldset legend button {
+    border: 0;
+    font-size: 700 1rem Archivo;
+    background-color: var(--color-box-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+#page-teacher-form main form footer {
+    padding: 0 2.4rem;
+    background-color: var(--color-box-footer);
+    width: 100%;
+}
+#page-teacher-form main form footer #warning {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.2rem auto;
+}
+#page-teacher-form main form footer button {
+    background-color: var(--color-secundary);
+    padding: 1.4rem;
+    color: var(--color-button-text);
+    border: 0;
+    width: 100%;
+    border-radius: 0.8rem;
+    margin-top: 1.6rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#page-teacher-form main form footer button:hover {
+    background: var(--color-secundary-dark);
+}
+@media (min-width: 700px){
+    #page-teacher-form {
+        max-width: 100%;
+    }
+    #page-teacher-form main form footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2.4rem 0;
+    }  
+    #page-teacher-form main form footer button {
+        padding: auto;
+        height: 5.6rem;
+        width: 19.7rem;
+    } 
+    #page-teacher-form main form footer #warning{
+        margin: 0;       
+    }
+    #page-teacher-form main form footer #warning img{
+        margin-right: 2rem;
+        display: flex;
+        align-items: center;
+    }
+}

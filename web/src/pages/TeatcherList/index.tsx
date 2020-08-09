@@ -2,6 +2,10 @@ import React from 'react';
 import './style.css';
 import PageHeader from '../../components/PageHeader';
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg'
+import Input from '../../components/Input';
+import Select from '../../components/Select';
+import subjects from '../../utils/materias.json';
+import diasDaSemana from '../../utils/diasDaSemana.json';
 
 
 function TeacherList() {
@@ -9,18 +13,9 @@ function TeacherList() {
         <div id="page-teacher-list" className="container">
           <PageHeader title="Esses são os proffys disponíveis">
             <form id="search-teacher">
-              <div className="input-block">
-                <label htmlFor="subject">Matéria</label>
-                <input type="text" name="subject" id="subject"/>
-              </div>
-              <div className="input-block">
-                <label htmlFor="week_day">Dia da semana</label>
-                <input type="text" name="week_day" id="week_day"/>
-              </div>
-              <div className="input-block">
-                <label htmlFor="time">Horário</label>
-                <input type="text" name="time" id="time"/>
-              </div>
+              <Select label="Matéria" name="subject" options={subjects} />
+              <Select label="Dia da semana" name="week_day" options={diasDaSemana} />
+              <Input label="Horário" name="time" type="time" />
             </form>
           </PageHeader>
           <main>
