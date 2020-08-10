@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useEffect, useState}  from 'react';
 import { Link } from 'react-router-dom';
 import './styles.css';
-import logo from '../../assets/images/logo.svg'
-import landing from '../../assets/images/landing.svg'
-import study from '../../assets/images/icons/study.svg'
-import giveClasses from '../../assets/images/icons/give-classes.svg'
-import purpleHeart from '../../assets/images/icons/purple-heart.svg'
+import logo from '../../assets/images/logo.svg';
+import landing from '../../assets/images/landing.svg';
+import study from '../../assets/images/icons/study.svg';
+import giveClasses from '../../assets/images/icons/give-classes.svg';
+import purpleHeart from '../../assets/images/icons/purple-heart.svg';
+import api from '../../services/api';
 
-const Home: React.FC = () => {
+function Home () {
+    const [totalConections, setTotalConnections] = useState(0);
+    useEffect(()=> {
+        async function loadTotalConnections(){
+            const totalConnectionsResponse = await api.get('/connections');
+            console.log(totalConnectionsResponse);
+            setTotalConnections(totalConnectionsResponse.data.totalResult.total);
+        }
+        loadTotalConnections();
+    }, [])
   return (
     <div id="landing">
         <div id="landing-content" className="container">
@@ -27,7 +37,7 @@ const Home: React.FC = () => {
                 </Link>
         </div>
                 
-        <p id="footer">Total de 200 conexões já realizadas <img src={purpleHeart}  alt="Logo da aplicação"/></p>
+        <p id="footer">Total de {totalConections} conexões já realizadas <img src={purpleHeart}  alt="Logo da aplicação"/></p>
         </div>
     </div>
   );
