@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import routes from './routes';
+import 'dotenv/config';
 
 export default class App {
     private app: express.Application
